@@ -12,8 +12,8 @@ class Food(Turtle):
         self.speed("fastest")
         self.refresh()
         
-    '''Repositions the food to a random location within the defined range.'''
     def refresh(self):
+        '''Repositions the food to a random location within the defined range.'''
         rand_x = random.randint(-280,280)
         rand_y = random.randint(-280,280)
         self.goto(rand_x, rand_y)

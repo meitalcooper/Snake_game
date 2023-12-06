@@ -20,12 +20,12 @@ class Snake:
         for position in STARTING_POSITIONS:
            self.add_segment(position)
 
-    
-    '''Adds a new segment to the snake at a specified position.
-    Creates a new 'square' shaped turtle segment, sets its color to white and positions it at
-    the given coordinates. 
-    The new segment is then appended to the snake's segments list.'''
-    def add_segment(self, position):
+  
+    def add_segment(self, position):                     
+            '''Adds a new segment to the snake at a specified position.
+            Creates a new 'square' shaped turtle segment, sets its color to white and positions it at
+            the given coordinates. 
+            The new segment is then appended to the snake's segments list.'''
             new_segment = Turtle("square")
             new_segment.color("white")
             new_segment.penup()
@@ -33,13 +33,13 @@ class Snake:
             self.segments.append(new_segment)
 
     def extend(self):
-        #add a new segment to the sneake.
+        """add a new segment to the sneake."""
         self.add_segment(self.segments[-1].position())
 
     
-    '''Moves each snake segment to the position of the next segment in a reverse order, 
-    starting from the tail and ending with the head moving forward by MOVE_DISTANCE.'''
-    def move(self):
+    def move(self):       
+        '''Moves each snake segment to the position of the next segment in a reverse order, 
+        starting from the tail and ending with the head moving forward by MOVE_DISTANCE.'''
         for seg_num in range(len(self.segments)-1, 0, -1):
             new_x = self.segments[seg_num-1].xcor()
             new_y = self.segments[seg_num-1].ycor()

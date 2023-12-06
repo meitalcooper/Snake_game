@@ -16,14 +16,16 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
         
     def update_scoreboard(self):
+        """Update and display the current score on the screen."""
         self.write(f"Score : {self.score}", align=ALIGNMENT, font=FONT)
 
     def game_over(self):
+        """Display the 'GAME OVER' message at the center of the screen."""
         self.goto(0, 0)
         self.write("GAME OVER", align=ALIGNMENT, font=FONT)
             
-    '''Increases the score by 1,clears the previous score display,and updates the scoreboard.'''
-    def increade_score(self):
+    def increase_score(self):
+        '''Increases the score by 1,clears the previous score display,and updates the scoreboard.'''
         self.score +=1
         self.clear()
         self.update_scoreboard()
